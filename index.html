@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>区块链投票系统</title>
+
+    <link rel="stylesheet" href="./stylesheets/style.css">
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="./javascripts/script.js"></script>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-expand-sm bg-light navbar-light">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">主页</a>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link" id="nav-intro">项目介绍</div>
+              </li>
+              <li class="nav-item">
+                <div class="nav-link" id="nav-team">团队</div>
+              </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="p-5">
+        <div class="row">
+            <div class="jumbotron text-center col-3" style="margin-bottom:0; padding-right:1;">
+                <img src="./images/logo.png" class="rounded-circle" alt="Cinque Terre" id="logo"> 
+                <h2>区块链投票系统</h2>
+                <p>华东师范大学</p>
+            </div>
+            <div class="jumbotron text-left col-9" style="margin-bottom:0; padding-left:1;" id="intro">
+                <h1>项目介绍</h1>
+
+                <div class="card" style="margin-top:20px;">
+                    <div class="card-body">
+                        <div class="card-body">
+                            <h4 class="card-title">项目内容</h4>
+                            <p class="card-text">本项目搭建一个部署于区块链上，功能完善，用户友好的区块链投票系统。在确保投票结果真实可靠、可溯源、不可篡改的情况下，尽可能满足投票发起者和投票站的使用需求，设置可投票数激励机制，对投票结果进行数据分析及可视化。</p>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="card" style="margin-top:20px;">
+                    <div class="card-body">
+                        <div class="card-body">
+                            <h4 class="card-title">用户画像</h4>
+                            <div class="row" style="margin-bottom: 20px;">
+                                <div class="card col-5 m-auto">
+                                    痛点：
+                                    <li>投票过程中会出现刷票现象，存在不正当的花钱购买选票，刷票软件刷虚假票等情况，使得票数异常增长，形成恶性竞争。</li>
+                                    <li>投票过程不公开不透明，举办方的后台投票数据有被篡改的可能，候选人和公众都无法监督投票过程，投票的公平性难以保证。</li>
+                                </div>
+                                <div class="card col-5 m-auto">
+                                    收获：
+                                    <li>明星投票常常由后援会等民间粉丝组织发起，明星粉丝自发参与。公开公正的投票可以调查明星受欢迎度，同时扩大民间组织的影响力。</li>
+                                    <li>选秀投票的投票结果往往用于决定参赛者的排位，从而决定参赛者是否能出道，公开公正的投票可以保证选秀的公平性，避免暗箱操作。</li>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card col-5 m-auto">
+                                    待完成：
+                                    <li>监督每一张选票的来源，防止恶意刷票。</li>
+                                    <li>利用技术手段保证投票数据公正公开，不被篡改。</li>
+                                </div>
+                                <div class="card col-5 m-auto">
+                                    用例：
+                                    <li>需要一个可以保证公平性、公开性、可信度的在线投票平台，从而规避假票、刷票、暗门操作等情况。</li>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="card" style="margin-top:20px;">
+                    <div class="card-body">
+                        <div class="card-body">
+                            <h4 class="card-title">问题定义</h4>
+                            <p class="card-text">如今的主流互联网平台，如微博、b站等，都具备投票功能，然而数据均在平台应用的后台进行操作，并且鲜有基于投票数据提供的服务。投票数据的公开公正、不可篡改是投票公平性的重要一环，但由于这些平台的选票数据都是集中保存在非公开数据库上的，投票公平性的唯一保障是这些平台的公信力。对公信力不够的小平台、小组织，如果需要进行公平的投票，需要利用技术手段来保证投票的内容、过程和结果的透明和不可篡改，并且可供检验以确保真实性。因此需要采用区块链技术使投票数据不可篡改、公开透明。另外，也可以基于投票数据提供数据分析、可视化等服务。</p>
+                        </div>
+                    </div> 
+                </div>
+
+                <div class="card" style="margin-top:20px;">
+                    <div class="card-body">
+                        <div class="card-body">
+                            <h4 class="card-title">需求总结</h4>
+                            <div class="row" style="margin-bottom: 20px;">
+                                <div class="card col-3 m-auto">
+                                    <h5 class="card-title">功能</h5>
+                                    <p class="card-text">实现完整的投票流程，投票的过程和结果可以具体记录，公开透明、可监督。</p>
+                                </div>
+                                <div class="card col-3 m-auto">
+                                    <h5 class="card-title">界面</h5>
+                                    <p class="card-text">界面用户友好，便于进行发起投票、参与投票、查看过程和结果等操作。</p>
+                                </div>
+                                <div class="card col-3 m-auto">
+                                    <h5 class="card-title">稳定</h5>
+                                    <p class="card-text">具备高稳定性，能够应对大量用户的并发操作。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 50px;">
+            <div class="jumbotron text-center col-12" style="margin-bottom:0; padding-right:1;" id="team">
+                <h1>团队</h1>
+                <div class="row" style="margin-top: 50px;">
+                    <div class="card col-2 m-auto">
+                        <img class="card-img-top" src="./images/俞泽恺.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title">俞泽恺</h4>
+                          <p class="card-text">18级本科生</p>
+                          <a href="./team/俞泽恺.html" class="btn btn-info">更多资料</a>
+                        </div>
+                    </div>
+                    <div class="card col-2 m-auto">
+                        <img class="card-img-top" src="./images/段晗祈.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title">段晗祈</h4>
+                          <p class="card-text">19级本科生</p>
+                          <a href="./team/段晗祈.html" class="btn btn-info">更多资料</a>
+                        </div>
+                    </div>
+                    <div class="card col-2 m-auto">
+                        <img class="card-img-top" src="./images/陈郅睿.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title">陈郅睿</h4>
+                          <p class="card-text">18级本科生</p>
+                          <a href="./team/陈郅睿.html" class="btn btn-info">更多资料</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 50px;">
+                    <div class="card col-2 m-auto">
+                        <img class="card-img-top" src="./images/吴佳威.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title">吴佳威</h4>
+                          <p class="card-text">20级本科生</p>
+                          <a href="./team/吴佳威.html" class="btn btn-info">更多资料</a>
+                        </div>
+                    </div>
+                    <div class="card col-2 m-auto">
+                        <img class="card-img-top" src="./images/杨杰.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title">杨杰</h4>
+                          <p class="card-text">18级本科生</p>
+                          <a href="./team/杨杰.html" class="btn btn-info">更多资料</a>
+                        </div>
+                    </div>
+                    <div class="card col-2 m-auto">
+                        <img class="card-img-top" src="./images/王一平.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title">王一平</h4>
+                          <p class="card-text">18级本科生</p>
+                          <a href="./team/王一平.html" class="btn btn-info">更多资料</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
